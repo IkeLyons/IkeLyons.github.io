@@ -1,13 +1,22 @@
 .container {
-  display: flex;
+  display: grid;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
+.container > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
 .blackBox {
   height: 25vh;
   width: 25vh;
   background-color: black;
+}
+
+.text {
+  color: white;
 }
