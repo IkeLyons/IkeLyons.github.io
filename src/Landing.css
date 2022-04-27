@@ -14,9 +14,11 @@
 .blackBox {
   height: 25vh;
   width: 25vh;
-  background-color: black;
+  background-color: grey;
 }
 
 .text {
+  font-size: 5em;
+  font-family: "Prompt", sans-serif;
   color: white;
 }
