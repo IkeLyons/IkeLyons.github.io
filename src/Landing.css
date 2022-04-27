@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.blackBox {
+  height: 25vh;
+  width: 25vh;
+  background-color: black;
+}
