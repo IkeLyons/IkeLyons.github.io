@@ -1,24 +1,18 @@
-.container {
-  display: grid;
-  flex-flow: row wrap;
-  align-items: center;
+.root {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: space-around;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-.container > * {
-  grid-column-start: 1;
-  grid-row-start: 1;
+.container {
+  text-align: center;
 }
 
-.blackBox {
-  height: 25vh;
-  width: 25vh;
-  background-color: grey;
-}
-
-.text {
-  font-size: 5em;
-  font-family: "Prompt", sans-serif;
-  color: white;
+.word {
+  margin-right: 0.2em;
+  width: 40px;
+  display: inline-block;
 }
