@@ -16,3 +16,8 @@
   width: 40px;
   display: inline-block;
 }
+
+.downarrows {
+  position: fixed;
+  bottom: 0;
+}
