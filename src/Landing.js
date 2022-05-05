@@ -1,19 +1,24 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Landing.css";
 
-const words = "nice to meet you".split("");
+const words = "i'm ike lyons".split("");
 
 function Landing() {
   return (
     <div className="root">
-      <div className="nameHeader">
-        <Parallax translateY={[200, -200]}>
-          <span className="text">i'm ike lyons</span>
+      <div className="topTextContainer">
+        <Parallax translateY={[400, -200]}>
+          <span className="text">Hello there</span>
         </Parallax>
       </div>
-      <div className="container">
+      <div className="imageContainer">
+        <Parallax translateY={[-50, 50]}>
+          <img src="/IMG_0150.jpg" alt="A picture of me your browser didnt download :(" />
+        </Parallax>
+      </div>
+      <div className="bottomTextContainer">
         {words.map((word, i) => (
-          <Parallax key={i} translateX={[100 * (i - 7.5) * -1, 100 * (i - 7.5)]} className="word">
+          <Parallax key={i} translateX={[100 * (i - words.length / 2) * -1, 100 * (i - words.length / 2)]} className="word">
             {word}
           </Parallax>
         ))}
