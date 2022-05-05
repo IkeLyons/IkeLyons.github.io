@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: "Major Mono Display", monospace;
-  font-size: 5em;
+  font-size: 10vh;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
