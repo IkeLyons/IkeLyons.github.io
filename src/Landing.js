@@ -26,7 +26,7 @@ function Landing() {
         </div>
       </div>
       <div className="footer">
-        <div>software developer</div>
+        <Parallax translateX={[10, -100]}>software developer</Parallax>
         <div className="downarrows">
           <svg style={{ color: "#ffffff" }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi" viewBox="0 0 16 16">
             {" "}
@@ -42,7 +42,7 @@ function Landing() {
             ></path>{" "}
           </svg>
         </div>
-        <div>something else</div>
+        <Parallax translateX={[-10, 100]}>something else</Parallax>
       </div>
     </div>
   );
