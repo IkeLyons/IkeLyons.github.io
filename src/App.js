@@ -11,7 +11,6 @@ function App() {
       <ParallaxProvider>
         <Landing></Landing>
         <Bio></Bio>
-        <div className="blankSpace"></div>
       </ParallaxProvider>
     </div>
   );
