@@ -19,17 +19,19 @@
   z-index: 3;
   margin: auto;
   margin-bottom: -5vh;
+  animation: fadeIn 5s;
 }
 
-.topTextContainer:hover {
+/* .topTextContainer:hover {
   animation: shake 0.5s infinite;
-}
+} */
 
 .imageContainer {
   margin: auto;
   z-index: 2;
   text-align: center;
   margin-bottom: -5vh;
+  animation: fadeIn 5s;
 }
 
 .bottomTextContainer {
@@ -37,6 +39,7 @@
   z-index: 3;
   text-align: center;
   margin-bottom: 5vh;
+  animation: fadeIn 5s;
 }
 
 .word {
@@ -82,8 +85,17 @@ img {
   height: auto;
 }
 
-img:hover {
+/* img:hover {
   animation: shake 0.5s infinite;
+} */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes shake {
