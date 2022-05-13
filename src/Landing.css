@@ -59,6 +59,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.4em;
+  /* bottom: env(safe-area-inset-bottom); */
 }
 
 .footer > div {
@@ -92,6 +93,8 @@ img {
   }
   .footer {
     justify-content: center;
+    position: fixed;
+    bottom: env(safe-area-inset-bottom);
   }
   .downarrows {
     width: 100%;
