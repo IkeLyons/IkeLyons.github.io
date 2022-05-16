@@ -88,6 +88,9 @@ img {
 }
 
 @media only screen and (max-width: 450px) {
+  .topTextContainer {
+    margin-bottom: 2vh;
+  }
   img {
     max-width: 50vw;
   }
