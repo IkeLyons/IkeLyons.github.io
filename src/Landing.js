@@ -1,5 +1,6 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Landing.css";
+import TypeAnimator from "./TypeAnimator";
 
 const words = "i'm ike lyons".split("");
 
@@ -26,6 +27,7 @@ function Landing() {
         </div>
       </div>
       <div className="footer">
+        <TypeAnimator text="test"></TypeAnimator>
         <Parallax translateX={[10, -100]}>Software Engineering</Parallax>
         <div className="downarrows">
           <svg style={{ color: "#ffffff" }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi" viewBox="0 0 16 16">
