@@ -1,11 +1,13 @@
 import "./Bio.css";
+import "./TypeAnimator.js";
+import TypeAnimator from "./TypeAnimator.js";
 
 function Bio() {
   return (
     <div className="bioRoot">
       <div className="bioText">
-        nice to meet you! i'm william lyons (better known as ike), a software engineer and web devloper based in New York City. i'm passionate about open
-        source, football, and learning new technologies.{" "}
+        nice to meet you! i'm william lyons (better known as ike), a <TypeAnimator text="software engineer" timeout={250}></TypeAnimator> and web developer
+        based in New York City. i'm passionate about open source, football, and learning new technologies.{" "}
       </div>
       <div className="linkText">
         check out my{" "}

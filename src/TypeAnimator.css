@@ -5,9 +5,9 @@
 
 @keyframes blink {
   from {
-    opacity: 0%;
+    opacity: 1;
   }
   to {
-    opacity: 100%;
+    opacity: 0;
   }
 }
