@@ -1,0 +1,13 @@
+.typeAnimator::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

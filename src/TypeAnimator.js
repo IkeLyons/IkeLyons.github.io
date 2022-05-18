@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./TypeAnimator.css";
 
 function TypeAnimator({ text = "", timeout = 1000 }) {
   const [content, setContent] = useState("");
@@ -13,7 +14,7 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
     }
   }, [content]);
 
-  return <pre>{content}</pre>;
+  return <pre className="typeAnimator">{content}</pre>;
 }
 
 export default TypeAnimator;
