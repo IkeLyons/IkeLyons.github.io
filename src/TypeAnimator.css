@@ -1,16 +1,32 @@
-.blinkingCursor {
-  animation: blink 1s infinite;
+.typeAnimator {
+  display: inline;
+  margin-right: 0;
 }
 
-.typeAnimator {
+.contentDiv {
   display: inline;
 }
 
+.test {
+  margin-top: auto;
+  margin-left: -0.7em;
+  /* margin-right: 1.5em; */
+  display: inline-block;
+  width: 0.66em;
+  height: 0.8em;
+  background-color: grey;
+  animation: blink 0.5s infinite;
+  mix-blend-mode: difference;
+}
+
 @keyframes blink {
-  from {
+  0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
   }
-  to {
-    opacity: 0;
+  100% {
+    opacity: 1;
   }
 }

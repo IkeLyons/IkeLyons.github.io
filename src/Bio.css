@@ -2,8 +2,8 @@
   height: 100vh;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .bioRoot > div {
@@ -19,7 +19,7 @@ a {
   display: inline-block;
   font-size: 1.1em;
   color: #39ff14;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 a:hover {

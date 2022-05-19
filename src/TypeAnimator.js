@@ -16,9 +16,11 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   useEffect(() => {
     if (isVisible) {
       if (index < text.length) {
+        let to = timeout + (Math.floor(Math.random() * 200) - 99);
+        console.log(index);
         setTimeout(() => {
           setContent((content) => content + text[index]);
-        }, timeout);
+        }, to);
         setIndex((index) => index + 1);
       } else {
         setIsBlinking(false);
@@ -47,8 +49,10 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
 
   return (
     <div ref={currentElement} className="typeAnimator">
+      {/* <div className="contentDiv">{content}</div> */}
+
       {content}
-      {isBlinking ? <span className="blinkingCursor">|</span> : null}
+      {isBlinking ? <div className="test"></div> : null}
     </div>
   );
 }
