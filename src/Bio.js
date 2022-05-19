@@ -6,7 +6,7 @@ function Bio() {
   return (
     <div className="bioRoot">
       <div className="bioText">
-        nice to meet you! i'm william lyons (better known as ike), a <TypeAnimator text="software engineer" timeout={250}></TypeAnimator> and web developer
+        nice to meet you! i'm william lyons (better known as ike), a <TypeAnimator text="software engineer and web developer " timeout={100}></TypeAnimator>
         based in New York City. i'm passionate about open source, football, and learning new technologies.{" "}
       </div>
       <div className="linkText">

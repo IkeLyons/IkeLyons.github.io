@@ -1,6 +1,9 @@
-.typeAnimator::after {
-  content: "|";
+.blinkingCursor {
   animation: blink 1s infinite;
+}
+
+.typeAnimator {
+  display: inline;
 }
 
 @keyframes blink {

@@ -5,6 +5,7 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   const [content, setContent] = useState("");
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isBlinking, setIsBlinking] = useState(true);
   const currentElement = useRef();
 
   useEffect(() => {
@@ -19,6 +20,8 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
           setContent((content) => content + text[index]);
         }, timeout);
         setIndex((index) => index + 1);
+      } else {
+        setIsBlinking(false);
       }
     }
   }, [content, isVisible]);
@@ -43,9 +46,10 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   };
 
   return (
-    <p ref={currentElement} className="typeAnimator">
+    <div ref={currentElement} className="typeAnimator">
       {content}
-    </p>
+      {isBlinking ? <span className="blinkingCursor">|</span> : null}
+    </div>
   );
 }
 
