@@ -7,7 +7,14 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
+  transition: all 150ms ease;
+  transition-property: opacity, background-color, transform, mix-blend-mode;
   mix-blend-mode: difference;
+}
+
+.cursorHovered {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: white;
 }
 
 @media only screen and (max-width: 450px) {
