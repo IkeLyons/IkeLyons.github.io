@@ -1,8 +1,9 @@
 import "./App.css";
-import Landing from "./Landing.js";
-import Bio from "./Bio.js";
+import Landing from "./Pages/Landing.js";
+import Bio from "./Pages/Bio.js";
+import Projects from "./Pages/Projects.js";
 import { ParallaxProvider } from "react-scroll-parallax";
-import Cursor from "./Cursor.js";
+import Cursor from "./Components/Cursor.js";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <ParallaxProvider>
         <Landing></Landing>
         <Bio></Bio>
+        <Projects></Projects>
       </ParallaxProvider>
     </div>
   );

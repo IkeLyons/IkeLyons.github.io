@@ -1,6 +1,6 @@
 import "./Bio.css";
-import "./TypeAnimator.js";
-import TypeAnimator from "./TypeAnimator.js";
+import "../Components/TypeAnimator.js";
+import TypeAnimator from "../Components/TypeAnimator.js";
 
 function Bio() {
   return (
