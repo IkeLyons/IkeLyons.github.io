@@ -47,7 +47,6 @@ function Cursor() {
     <div>
       {visible ? (
         <div
-          //   className={"cursor" + linkHovered ? " cursorHovered" : ""}
           className={`cursor ${linkHovered ? "cursorHovered" : ""}`}
           style={{
             left: `${pos.x}px`,

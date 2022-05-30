@@ -7,7 +7,7 @@ function Bio() {
     <div className="bioRoot">
       <div className="bioText">
         <TypeAnimator text="nice to meet you!" timeout={200}></TypeAnimator> i'm william lyons (better known as ike), a software engineer and web developer
-        based in New York City. i'm passionate about open source, football, and learning new technologies.{" "}
+        based in New York City. i'm passionate about open source, writing great software, and baseball.{" "}
       </div>
       <div className="linkText">
         check out my{" "}
@@ -18,6 +18,7 @@ function Bio() {
         <div className="linkContainer">
           <a href="https://www.linkedin.com/in/ikelyons/">linkedin</a>{" "}
         </div>
+        . lastly, take a look at some of my PROJECTS:
       </div>
     </div>
   );

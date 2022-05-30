@@ -1,0 +1,37 @@
+.projectsRoot {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.projectDescription {
+  font-size: 0.3em;
+  word-break: none;
+  display: inline;
+  width: 66%;
+  margin-top: 0;
+}
+
+.projectVisual {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 30%;
+  height: auto;
+}
+
+.projectVisual > img {
+  width: 75%;
+  height: auto;
+}

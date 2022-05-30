@@ -17,7 +17,6 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
     if (isVisible) {
       if (index < text.length) {
         let to = timeout + (Math.floor(Math.random() * 200) - 99);
-        console.log(index);
         setTimeout(() => {
           setContent((content) => content + text[index]);
         }, to);
@@ -49,8 +48,6 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
 
   return (
     <div ref={currentElement} className="typeAnimator">
-      {/* <div className="contentDiv">{content}</div> */}
-
       {content}
       {isBlinking ? <div className="test"></div> : null}
     </div>
