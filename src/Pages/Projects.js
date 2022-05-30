@@ -1,10 +1,18 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Projects.css";
+import { useState, useEffect } from "react";
 
 function Projects() {
+  const [matches, setMatches] = useState(window.matchMedia("(max-width: 450px)").matches);
+
+  useEffect(() => {
+    const handler = (e) => setMatches(e.matches);
+    window.matchMedia("(max-width: 450px)").addEventListener("change", handler);
+  });
+
   return (
     <div className="projectsRoot">
-      <Parallax className="project" translateX={[-100, 0]} shouldAlwaysCompleteAnimation={true}>
+      <Parallax className="project" translateX={matches ? [0, 0] : [-100, 0]} shouldAlwaysCompleteAnimation={true} endScroll={500}>
         <a className="projectVisual" href="https://www.textronsystems.com/products/a2pats-family-products">
           <img src="/a2pats.png" alt="A2PATS Logo"></img>
         </a>
@@ -15,7 +23,7 @@ function Projects() {
           website!
         </p>
       </Parallax>
-      <Parallax className="project" translateX={[100, 0]} shouldAlwaysCompleteAnimation={true}>
+      <Parallax className="project middleProject" translateX={matches ? [0, 0] : [100, 0]} shouldAlwaysCompleteAnimation={true}>
         <p className="projectDescription">
           During the fall of 2020 I was a project lead for a Rensselaer Center for Open Source project called yacs. This website is our schools de-facto course
           scheduler, and during my tenure we finished out a full re-design and modernization of the site in vue.js and flask; creating the site you see today.
@@ -25,7 +33,7 @@ function Projects() {
           <img src="/yacstext.png" alt="YACS Logo"></img>
         </a>
       </Parallax>
-      <Parallax className="project" translateX={[-100, 0]} shouldAlwaysCompleteAnimation={true}>
+      <Parallax className="project" translateX={matches ? [0, 0] : [-100, 0]} shouldAlwaysCompleteAnimation={true}>
         <a className="projectVisual" href="https://www.joinacsia.org">
           <img src="/ACSIA.png" alt="ACSIA Logo"></img>
         </a>

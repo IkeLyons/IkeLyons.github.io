@@ -35,3 +35,26 @@
   width: 75%;
   height: auto;
 }
+
+@media only screen and (max-width: 450px) {
+  .projectsRoot {
+    font-size: 0.75em;
+    height: 300vh;
+  }
+  .project {
+    height: 100vh;
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+  .projectVisual {
+    width: 60%;
+    height: auto;
+  }
+  .projectDescription {
+    align-self: center;
+    width: 80%;
+  }
+  .middleProject {
+    flex-direction: column-reverse;
+  }
+}
