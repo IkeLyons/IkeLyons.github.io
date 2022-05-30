@@ -39,7 +39,7 @@
 @media only screen and (max-width: 450px) {
   .projectsRoot {
     font-size: 0.75em;
-    height: 300vh;
+    height: 350vh;
   }
   .project {
     height: 100vh;
