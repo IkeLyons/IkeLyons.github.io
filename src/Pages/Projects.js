@@ -2,6 +2,8 @@ import { Parallax } from "react-scroll-parallax";
 import "./Projects.css";
 import { useState, useEffect } from "react";
 
+const ease = "easeOutCirc";
+
 function Projects() {
   const [matches, setMatches] = useState(window.matchMedia("(max-width: 450px)").matches);
 
@@ -12,7 +14,13 @@ function Projects() {
 
   return (
     <div className="projectsRoot">
-      <Parallax className="project" translateX={matches ? [0, 0] : [-100, 0]} rotateY={matches ? [0, 720] : [0, 0]} shouldAlwaysCompleteAnimation={true}>
+      <Parallax
+        className="project"
+        translateX={matches ? [0, 0] : [-100, 0]}
+        rotateY={matches ? [0, 360] : [0, 0]}
+        shouldAlwaysCompleteAnimation={true}
+        easing={ease}
+      >
         <a className="projectVisual" href="https://www.textronsystems.com/products/a2pats-family-products">
           <img src="/a2pats.png" alt="A2PATS Logo"></img>
         </a>
@@ -26,8 +34,9 @@ function Projects() {
       <Parallax
         className="project middleProject"
         translateX={matches ? [0, 0] : [100, 0]}
-        rotateX={matches ? [0, 720] : [0, 0]}
+        rotateX={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
+        easing={ease}
       >
         <p className="projectDescription">
           During the fall of 2020 I was a project lead for a Rensselaer Center for Open Source project called yacs. This website is our schools de-facto course
@@ -38,7 +47,13 @@ function Projects() {
           <img src="/yacstext.png" alt="YACS Logo"></img>
         </a>
       </Parallax>
-      <Parallax className="project" translateX={matches ? [0, 0] : [-100, 0]} rotateZ={matches ? [0, 720] : [0, 0]} shouldAlwaysCompleteAnimation={true}>
+      <Parallax
+        className="project"
+        translateX={matches ? [0, 0] : [-100, 0]}
+        rotateZ={matches ? [0, 360] : [0, 0]}
+        shouldAlwaysCompleteAnimation={true}
+        easing={ease}
+      >
         <a className="projectVisual" href="https://www.joinacsia.org">
           <img src="/ACSIA.png" alt="ACSIA Logo"></img>
         </a>
