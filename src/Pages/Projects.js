@@ -27,7 +27,7 @@ function Projects() {
         <p className="projectDescription">
           During the spring of 2021 my project was textron's a2pats electromagnetic warfare simulation software. there i implemented a distributed simulation
           standard (dis) across the full-stack using c# and wpf .net. This allowed our simultion software to seemlessly integrate with other (often proprietary)
-          warfare simulation software. I also interfaced with Boeing Company to troubleshoot issues and ensure end-user satisfaction. Click the logo to view the
+          warfare simulation software. I also interfaced Boeing engineers to troubleshoot issues and ensure end-user satisfaction. Click the logo to view the
           website!
         </p>
       </Parallax>
@@ -44,7 +44,7 @@ function Projects() {
           Click the logo to view the website!
         </p>
         <a className="projectVisual" href="https://yacs.cs.rpi.edu">
-          <img src="/yacstext.png" alt="YACS Logo"></img>
+          <img src={matches ? "/yacs.png" : "/yacstext.png"} alt="YACS Logo"></img>
         </a>
       </Parallax>
       <Parallax
