@@ -1,5 +1,5 @@
 .bioRoot {
-  height: 100vh;
+  height: 75vh;
   display: flex;
   flex-flow: column wrap;
 }

@@ -1,11 +1,14 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Projects.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ease = "easeOutCirc";
 
 function Projects() {
   const [matches, setMatches] = useState(window.matchMedia("(max-width: 450px)").matches);
+  const scrollStart = window.innerHeight;
+  const scrollDivisionUnit = (window.innerHeight / 3) * 0.9;
+  const scrollEnd = scrollStart + scrollDivisionUnit;
 
   useEffect(() => {
     const handler = (e) => setMatches(e.matches);
@@ -20,6 +23,8 @@ function Projects() {
         rotateY={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
+        startScroll={scrollStart}
+        endScroll={scrollEnd}
       >
         <a className="projectVisual" href="https://www.textronsystems.com/products/a2pats-family-products">
           <img src="/a2pats.png" alt="A2PATS Logo"></img>
@@ -37,11 +42,13 @@ function Projects() {
         rotateX={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
+        startScroll={scrollStart + scrollDivisionUnit}
+        endScroll={scrollEnd + scrollDivisionUnit}
       >
         <p className="projectDescription">
-          During the fall of 2020 I was a project lead for a Rensselaer Center for Open Source project called yacs. This website is our schools de-facto course
-          scheduler, and during my tenure we finished out a full re-design and modernization of the site in vue.js and flask; creating the site you see today.
-          Click the logo to view the website!
+          During the fall of 2020 I was a project lead for yacs; Rensselaer Polytechnic Institute's de-facto course scheduler. yacs was created under the
+          Rensselaer Center for Open Source and during my tenure we finished out a full re-design and modernization of the site in vue.js and flask; creating
+          the site you see today. Click the logo to view the website!
         </p>
         <a className="projectVisual" href="https://yacs.cs.rpi.edu">
           <img src={matches ? "/yacs.png" : "/yacstext.png"} alt="YACS Logo"></img>
@@ -53,6 +60,8 @@ function Projects() {
         rotateZ={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
+        startScroll={scrollStart + 2 * scrollDivisionUnit}
+        endScroll={scrollEnd + 2 * scrollDivisionUnit}
       >
         <a className="projectVisual" href="https://www.joinacsia.org">
           <img src="/ACSIA.png" alt="ACSIA Logo"></img>
