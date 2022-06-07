@@ -1,6 +1,6 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Projects.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const ease = "easeOutCirc";
 
@@ -23,7 +23,7 @@ function Projects() {
         rotateY={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
-        startScroll={scrollStart}
+        startScroll={matches ? null : scrollStart}
         endScroll={scrollEnd}
       >
         <a className="projectVisual" href="https://www.textronsystems.com/products/a2pats-family-products">
@@ -42,8 +42,8 @@ function Projects() {
         rotateX={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
-        startScroll={scrollStart + scrollDivisionUnit}
-        endScroll={scrollEnd + scrollDivisionUnit}
+        startScroll={matches ? null : scrollStart + scrollDivisionUnit}
+        endScroll={matches ? null : scrollEnd + scrollDivisionUnit}
       >
         <p className="projectDescription">
           During the fall of 2020 I was a project lead for yacs; Rensselaer Polytechnic Institute's de-facto course scheduler. yacs was created under the
@@ -60,8 +60,8 @@ function Projects() {
         rotateZ={matches ? [0, 360] : [0, 0]}
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
-        startScroll={scrollStart + 2 * scrollDivisionUnit}
-        endScroll={scrollEnd + 2 * scrollDivisionUnit}
+        startScroll={matches ? null : scrollStart + 2 * scrollDivisionUnit}
+        endScroll={matches ? null : scrollEnd + 2 * scrollDivisionUnit}
       >
         <a className="projectVisual" href="https://www.joinacsia.org">
           <img src="/ACSIA.png" alt="ACSIA Logo"></img>
