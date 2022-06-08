@@ -24,7 +24,7 @@ function Projects() {
         shouldAlwaysCompleteAnimation={true}
         easing={ease}
         startScroll={matches ? null : scrollStart}
-        endScroll={scrollEnd}
+        endScroll={matches ? null : scrollEnd}
       >
         <a className="projectVisual" href="https://www.textronsystems.com/products/a2pats-family-products">
           <img src="/a2pats.png" alt="A2PATS Logo"></img>

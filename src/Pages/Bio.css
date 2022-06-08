@@ -2,11 +2,14 @@
   height: 75vh;
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .bioRoot > div {
   font-size: 0.5em;
-  margin: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .linkContainer {
