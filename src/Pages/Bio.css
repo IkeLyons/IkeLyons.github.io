@@ -29,7 +29,7 @@ a:hover {
 
 @media only screen and (max-width: 450px) {
   .bioRoot {
-    height: 75vh;
+    height: 100vh;
   }
 
   .bioRoot > div {
