@@ -1,9 +1,26 @@
+import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import "./Landing.css";
+import { useState, useEffect } from 'react';
 
 const words = "hello there".split("");
 
 function Landing() {
+  const [rotation, setRotation] = useState(0);
+
+  const handleScroll = () => {
+    const speed = window.scrollY;
+    setRotation(speed);
+    console.log(speed);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="root">
       <div className="main">
@@ -14,7 +31,7 @@ function Landing() {
         </div>
         <div className="imageContainer">
           <Parallax translateY={[-50, 50]}>
-            <img src="/IMG_0150.jpg" alt="Its me! Ike Lyons!" />
+            <img src="/IMG_0150.jpg" alt="Its me! Ike Lyons!" style={{transform: `rotate(${rotation}deg)`}}/>
           </Parallax>
         </div>
         <div className="bottomTextContainer">
