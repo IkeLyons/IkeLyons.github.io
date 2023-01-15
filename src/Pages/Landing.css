@@ -61,24 +61,27 @@
   font-size: 0.4em;
   /* bottom: env(safe-area-inset-bottom); */
 }
-
+/* 
 .footer > div {
   display: flex;
   justify-content: center;
   font-size: 2vw;
   width: 33%;
-}
+} */
 
-.footer div:first-child {
+/* .footer div:first-child {
   justify-content: left;
 }
 
 .footer div:last-child {
   display: float;
   justify-content: flex-end;
-}
+} */
 
 .downarrows {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   animation: bounce 0.5s infinite alternate;
 }
 

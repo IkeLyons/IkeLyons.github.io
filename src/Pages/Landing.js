@@ -1,20 +1,20 @@
 import { Parallax } from "react-scroll-parallax";
 import "./Landing.css";
 
-const words = "i'm ike lyons".split("");
+const words = "hello there".split("");
 
 function Landing() {
   return (
     <div className="root">
       <div className="main">
         <div className="topTextContainer">
-          <Parallax translateY={[400, -200]}>
+          {/* <Parallax translateY={[400, -200]}>
             <span className="text">Hello there</span>
-          </Parallax>
+          </Parallax> */}
         </div>
         <div className="imageContainer">
           <Parallax translateY={[-50, 50]}>
-            <img src="/IMG_0150.jpg" alt="A picture of me your browser didnt download :(" />
+            <img src="/IMG_0150.jpg" alt="Its me! Ike Lyons!" />
           </Parallax>
         </div>
         <div className="bottomTextContainer">
@@ -26,7 +26,7 @@ function Landing() {
         </div>
       </div>
       <div className="footer">
-        <Parallax translateX={[10, -100]}>Software Engineering</Parallax>
+        {/* <Parallax translateX={[10, -100]}>Software Engineering</Parallax> */}
         <div className="downarrows">
           <svg style={{ color: "#ffffff" }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi" viewBox="0 0 16 16">
             {" "}
@@ -42,7 +42,7 @@ function Landing() {
             ></path>{" "}
           </svg>
         </div>
-        <Parallax translateX={[-10, 100]}>Web Development</Parallax>
+        {/* <Parallax translateX={[-10, 100]}>Web Development</Parallax> */}
       </div>
     </div>
   );
