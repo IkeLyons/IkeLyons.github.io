@@ -12,7 +12,9 @@ function App() {
       <ParallaxProvider>
         <Landing></Landing>
         <Bio></Bio>
-        <Projects></Projects>
+        {/* Removing projects because they look bad and because I have 
+          a job now so this doesn't really need to be a resume site */}
+        {/* <Projects></Projects> */}
       </ParallaxProvider>
     </div>
   );

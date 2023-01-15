@@ -68,9 +68,9 @@ function Projects() {
         </a>
         <p className="projectDescription">
           I currently volunteer for acsia where I aid research efforts, manage the website, and support other researchers through infrastructure creation.
-          Founder Zach Hadley calls me the "data og" due to my efforts in dataset collection/web scraping as well as data visualization across multiple research
-          projects. I'm also looking at using GitHub's social impact initiative to help other non-profits in their work and to increase the public ability to
-          interact with acsia's research. Click the logo to view the website!
+          Founder Zach Hadley calls me the "data o.g." due to my efforts in dataset collection/web scraping as well as data visualization across multiple
+          research projects. I'm also looking at using GitHub's social impact initiative to help other non-profits in their work and to increase the public
+          ability to interact with acsia's research. Click the logo to view our website!
         </p>
       </Parallax>
     </div>
