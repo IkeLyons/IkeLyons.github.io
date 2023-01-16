@@ -4,7 +4,7 @@ import TypeAnimator from "../Components/TypeAnimator.js";
 
 function Bio() {
   return (
-    <div className="bioRoot">
+    <div className="bioRoot" id="bio">
       <div className="bioText">
         <TypeAnimator text="nice to meet you, i'm ike lyons!" timeout={100}></TypeAnimator> i'm currently living in New York City where i'm either watching the bears or working for Audible (hopefully not both).{" "}
       </div>
