@@ -25,9 +25,6 @@ jobs:
     - name: Install NPM packages
       run: npm ci
 
-    - name: Build project
-      run: npm run build
-
     - name: Deploy Code
       run: npm run deploy
 
