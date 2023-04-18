@@ -16,10 +16,10 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   useEffect(() => {
     if (isVisible) {
       if (index < text.length) {
-        let to = timeout + (Math.floor(Math.random() * 200) - 99);
+        //the timeout starts a loop because this effect has content as a dependency and the timout updates content
         setTimeout(() => {
           setContent((content) => content + text[index]);
-        }, to);
+        }, timeout + (Math.floor(Math.random() * 200) - 99));
         setIndex((index) => index + 1);
       } else {
         setIsBlinking(false);
@@ -38,10 +38,8 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   const isInViewport = () => {
     const top = currentElement.current.getBoundingClientRect().top;
     if (top - window.innerHeight <= 0) {
-      //   console.log("Element is in view or above the viewport");
       setIsVisible(true);
     } else {
-      //   console.log("Element is outside view");
       setIsVisible(false);
     }
   };
@@ -49,7 +47,7 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
   return (
     <div ref={currentElement} className="typeAnimator">
       {content}
-      {isBlinking ? <div className="test"></div> : null}
+      {isBlinking ? <div className="ghostCursor"></div> : null}
     </div>
   );
 }

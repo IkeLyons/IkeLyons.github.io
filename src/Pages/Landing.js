@@ -9,7 +9,7 @@ function Landing() {
   const [rotation, setRotation] = useState(0);
 
   const handleScroll = () => {
-    const speed = window.scrollY;
+    const speed = window.scrollY / 2;
     setRotation(speed);
     console.log(speed);
   }
@@ -44,7 +44,10 @@ function Landing() {
       </div>
       <div className="footer">
         {/* <Parallax translateX={[10, -100]}>Software Engineering</Parallax> */}
-        <div className="downarrows">
+        <div className="downarrows" onClick={() => {
+          var elmntToView = document.getElementById("bio");
+          elmntToView.scrollIntoView({behavior: "smooth"}); 
+        }}>
           <svg style={{ color: "#ffffff" }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi" viewBox="0 0 16 16">
             {" "}
             <path
