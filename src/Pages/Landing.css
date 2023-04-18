@@ -91,12 +91,6 @@ img {
   .downarrows {
     width: 100%;
   }
-  .footer div:first-child {
-    display: none;
-  }
-  .footer div:last-child {
-    display: none;
-  }
 }
 
 @keyframes fadeIn {
