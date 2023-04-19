@@ -25,9 +25,12 @@ jobs:
     - name: Install NPM packages
       run: npm ci
 
+    - name: Set Git configs
+      run: 
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+
     - name: Deploy Code
       run: npm run deploy
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     
