@@ -10,6 +10,7 @@ function Cursor() {
     addEventListeners();
     handleLinkHoverEvents();
     return () => removeEventListeners();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLinkHoverEvents = () => {

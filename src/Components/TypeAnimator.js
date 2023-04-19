@@ -25,6 +25,7 @@ function TypeAnimator({ text = "", timeout = 1000 }) {
         setIsBlinking(false);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content, isVisible]);
 
   const addEventListeners = () => {

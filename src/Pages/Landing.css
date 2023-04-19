@@ -88,9 +88,6 @@ img {
     position: fixed;
     bottom: env(safe-area-inset-bottom);
   }
-  .downarrows {
-    width: 100%;
-  }
 }
 
 @keyframes fadeIn {
