@@ -3,7 +3,7 @@ name: Build & deploy
 on:
   push:
     branches:
-      - test
+      - main
   pull_request:
     branches:
       - main
@@ -38,7 +38,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/test'
+    if: github.ref == 'refs/heads/main'
     
     steps:
     - name: Download artifact
