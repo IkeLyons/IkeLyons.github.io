@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 import "./Landing.css";
 import { useState, useEffect } from 'react';
 
-const words = "OneLastTest".split("");
+const words = "hello there".split("");
 
 function Landing() {
   const [rotation, setRotation] = useState(0);
