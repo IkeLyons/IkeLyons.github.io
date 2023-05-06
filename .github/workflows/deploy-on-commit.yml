@@ -3,7 +3,7 @@ name: Build & deploy
 on:
   push:
     branches:
-      - actions-broke
+      - main
   pull_request:
     branches:
       - main
