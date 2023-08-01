@@ -12,16 +12,6 @@
   margin-right: 5vw;
 }
 
-.linkContainer {
-  display: inline;
-}
-
-a {
-  display: inline-block;
-  font-size: 1.1em;
-  color: #39ff14;
-}
-
 a:hover {
   cursor: none;
   animation: shake 0.5s infinite;

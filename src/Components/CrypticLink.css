@@ -1,0 +1,9 @@
+.crypticLink {
+    display: inline;
+}
+
+a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #39ff14;
+}
