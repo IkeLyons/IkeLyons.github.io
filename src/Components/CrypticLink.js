@@ -1,22 +1,26 @@
 import { useRef, useEffect, useState } from 'react'
+import "./CrypticChar.js"
 import "./CrypticLink.css"
+import CrypticChar from './CrypticChar.js';
 
-const crytpicChars = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '=', '-', '[', ']', '{', '}', '<', '>', '?', '/', ';', ':']
+const timeout = 1000;
+const divideFactor = 10;
 
-function CrypticLink({link, text, timeout}){
+function CrypticLink({link, text}){
     const [isVisible, setIsVisible] = useState(false);
     const [index, setIndex] = useState(0);
-    const [content, setContent] = useState("")
+    const [content, setContent] = useState("");
     const currentElement = useRef();
 
     useEffect(() => {
         if (isVisible) {
           if (index < text.length) {
-            //the timeout starts a loop because this effect has content as a dependency and the timout updates content
+            // TODO:
+            // make this compnonent dynamically create and delete the crytpic char componenets
+            // the timeout starts a loop because this effect has content as a dependency and the timout updates content
             setTimeout(() => {
-                //Do the thing!!!!
-                //Call setContent!!!!!
-            }, timeout + (Math.floor(Math.random() * 200) - 99));
+
+            }, timeout/divideFactor);
             setIndex((index) => index + 1);
           }
         }
@@ -47,7 +51,7 @@ function CrypticLink({link, text, timeout}){
 
     return(
         <div ref={currentElement} className="crypticLink">
-            <a href={link}>{content}</a>
+            <a href={link}><CrypticChar></CrypticChar></a>
         </div>
     )
 }
