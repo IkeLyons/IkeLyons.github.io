@@ -4,32 +4,36 @@ import "./CrypticLink.css"
 import CrypticChar from './CrypticChar.js';
 
 const timeout = 1000;
-const divideFactor = 10;
 
 function CrypticLink({link, text}){
     const [isVisible, setIsVisible] = useState(false);
     const [index, setIndex] = useState(0);
+    const [numChars, setNumChars] = useState(text.length);
     const [content, setContent] = useState("");
     const currentElement = useRef();
 
     useEffect(() => {
+      var timer;
         if (isVisible) {
           if (index < text.length) {
-            // TODO:
-            // make this compnonent dynamically create and delete the crytpic char componenets
-            // the timeout starts a loop because this effect has content as a dependency and the timout updates content
-            setTimeout(() => {
-
-            }, timeout/divideFactor);
-            setIndex((index) => index + 1);
+            timer = setInterval(() => {
+              setContent(content + text[index]);
+              setIndex(index + 1);
+              setNumChars(numChars - 1);
+            }, timeout)
           }
         }
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [content, isVisible]);
+      return () => clearInterval(timer);
+    }, [content, isVisible, index]);
 
     useEffect(() => {
         addEventListeners();
         return () => removeEventListeners();
+    });
+
+    const crypticChars = Array.from({length: numChars}, (_, index) => {
+      return <CrypticChar key={index}></CrypticChar>;
     });
 
     const addEventListeners = () => {
@@ -51,7 +55,7 @@ function CrypticLink({link, text}){
 
     return(
         <div ref={currentElement} className="crypticLink">
-            <a href={link}><CrypticChar></CrypticChar></a>
+            <a href={link}>{content}{crypticChars}</a>
         </div>
     )
 }
