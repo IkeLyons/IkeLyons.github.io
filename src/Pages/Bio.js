@@ -1,6 +1,8 @@
 import "./Bio.css";
 import "../Components/TypeAnimator.js";
+import "../Components/CrypticLink.js";
 import TypeAnimator from "../Components/TypeAnimator.js";
+import CrypticLink from "../Components/CrypticLink.js";
 
 function Bio() {
   return (
@@ -10,13 +12,9 @@ function Bio() {
       </div>
       <div className="linkText">
         check out my{" "}
-        <div className="linkContainer">
-          <a href="https://github.com/IkeLyons">GitHub</a>{" "}
-        </div>
+        <CrypticLink link="https://github.com/IkeLyons" text="GitHub" timeout="500" />{" "}
         if you're into that open-source stuff. if you want a more in depth look at my experiences check out my{" "}
-        <div className="linkContainer">
-          <a href="https://www.linkedin.com/in/ikelyons/">linkedin</a>
-        </div>
+        <CrypticLink link="https://www.linkedin.com/in/ikelyons/" text="linkedin" timeout="300"/>
         . 
       </div>
     </div>

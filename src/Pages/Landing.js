@@ -11,7 +11,6 @@ function Landing() {
   const handleScroll = () => {
     const speed = window.scrollY / 2;
     setRotation(speed);
-    console.log(speed);
   }
 
   useEffect(() => {
