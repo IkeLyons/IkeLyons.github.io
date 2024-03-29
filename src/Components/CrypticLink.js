@@ -22,8 +22,8 @@ function CrypticLink({link, text, timeout}){
             }, timeout)
           }
         }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [content, isVisible, index]);
 
     useEffect(() => {
