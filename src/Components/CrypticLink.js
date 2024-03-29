@@ -3,9 +3,8 @@ import "./CrypticChar.js"
 import "./CrypticLink.css"
 import CrypticChar from './CrypticChar.js';
 
-const timeout = 300;
-
-function CrypticLink({link, text}){
+// TODO: display all cryptic chars on hover?
+function CrypticLink({link, text, timeout}){
     const [isVisible, setIsVisible] = useState(false);
     const [index, setIndex] = useState(0);
     const [numChars, setNumChars] = useState(text.length);

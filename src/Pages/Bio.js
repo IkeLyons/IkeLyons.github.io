@@ -12,9 +12,9 @@ function Bio() {
       </div>
       <div className="linkText">
         check out my{" "}
-        {/* <CrypticLink link="https://github.com/IkeLyons" text="GitHub"/>{" "} */}
+        <CrypticLink link="https://github.com/IkeLyons" text="GitHub" timeout="500" />{" "}
         if you're into that open-source stuff. if you want a more in depth look at my experiences check out my{" "}
-        <CrypticLink link="https://www.linkedin.com/in/ikelyons/" text="linkedin"/>
+        <CrypticLink link="https://www.linkedin.com/in/ikelyons/" text="linkedin" timeout="300"/>
         . 
       </div>
     </div>
