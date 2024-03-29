@@ -3,7 +3,7 @@ import "./CrypticChar.js"
 import "./CrypticLink.css"
 import CrypticChar from './CrypticChar.js';
 
-const timeout = 1000;
+const timeout = 300;
 
 function CrypticLink({link, text}){
     const [isVisible, setIsVisible] = useState(false);
