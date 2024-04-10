@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./CrypticChar.css"
 
 const timeout = 100;
-const crytpicChars = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '-', '[', ']', '{', '}', '<', '>', '?', '/', ';', ':']
+const crytpicChars = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '-', '[', ']', '{', '}', '<', '>', '?', '/', ';', ':','♬','♣','☻','§','♀','♂','☎','☂','◊','❦','♝']
 
 function CrypticChar(){
     const [content, setContent] = useState("");
